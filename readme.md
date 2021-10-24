@@ -1,9 +1,12 @@
 ## 简要
-+ 解读基于torchtext库，做多标签任务
-+ **实践**textcnn模型，实践[百度事件多标签比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)，验证集准确率accuracy达到`86%`
-+ 在`github`的`action`中，完成全程训练、批测，结果报告通过`cml工具`发送至commit评论
++ **解读**：torchtext库，做多标签任务
++ **实践**：textcnn模型，跑[百度事件多标签比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)，验证集准确率accuracy达到`86%`
++ **运行**：`github`的`action`中，完成全程训练、批测，结果报告通过`cml工具`发送至commit评论
 
-## 如何用torchtext库，做多标签任务
+## 解读
+
++ 如何用torchtext库，做多标签任务
+
 #### 读取数据
 
  顾名思义，多标签任务像是`不定项选择题`，是一条样本对应一个或多个标签，也可以没有对应标签，所以标注字段不能再用`sequential=False`参数，要对标注列进行切分，源码中的注释说明：
@@ -141,3 +144,31 @@ def multi_label_metrics_transfer(self, y, label_num):
 ## 实践
 + [数据源](https://github.com/percent4/multi-label-classification-4-event-type/tree/master/data)
 + [比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)
+
+#### 统计
+
+| 数据项目                       | 统计值 |
+| ------------------------------ | ------ |
+| 训练集单条jieba分词个数均值    | 31.63  |
+| 训练集单条jieba分词个数98%分位 | 101    |
+| 训练集条数                     | 11958  |
+| 验证集条数                     | 1498   |
+| jieba分词去重个数              | 40113  |
+| 标签个数                       | 65     |
+
+因此模型最大长度设置`100`
+
+## 运行
+
+详见本仓库actions
+
+## 参考致谢
+1. [CLUE](https://github.com/CLUEbenchmark/CLUE)
+2. [cml](https://towardsdatascience.com/what-data-scientists-need-to-know-about-devops-2f8bc6660284?gi=d43983ac072b)
+3. [cml.dev](https://cml.dev/)
+4. [onnx](https://github.com/microsoft/onnxruntime)
+5. [textcnn](http://emnlp2014.org/papers/pdf/EMNLP2014181.pdf)
+6. [word2vec](https://github.com/Embedding/Chinese-Word-Vectors)
+---
++ 欢迎`Star`和`Fork`
++ 欢迎订阅我的博客[https://lowin.li](https://lowin.li)
