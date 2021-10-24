@@ -92,9 +92,7 @@ class ModelLabel:
             f.write("---\n")
             f.write("|epoch|训练集acc|验证集acc|\n")
             f.write("|-|-|-|\n")
-            for epoch, train_acc, val_acc in zip(
-                epochs, train_accs, val_accs
-            ):
+            for epoch, train_acc, val_acc in zip(epochs, train_accs, val_accs):
                 f.write(f"|{epoch}|{train_acc}|{val_acc}|\n")
 
         # 存onnx格式
@@ -224,7 +222,7 @@ class ModelLabel:
         correct = 0
         for x in df.to_dict(orient="records"):
             labels, scores = self.predict(x["sentence"])
-            if "|".join(labels) == x["label"]:
+            if sorted(x["label"].split("|")) == sorted(labels):
                 correct += 1
         waste_time = time.time() - start
         qps = round(len(df) / waste_time, 3)
@@ -247,5 +245,5 @@ class ModelLabel:
 
 if __name__ == "__main__":
     m = ModelLabel(device="cpu", max_length=100, epochs=7)
-    m.train("sgns_百度")
+    # m.train("sgns_百度")
     print(m.evaluate())
