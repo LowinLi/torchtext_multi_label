@@ -7,9 +7,12 @@
 **torchtext**,**multilabel**,**MLOPS**,**CML**,**ONNX**,**textcnn**,**Continuous**
 
 ## 简要
-+ **解读**：torchtext库，做多标签任务
-+ **实践**：textcnn模型，跑[百度事件多标签比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)，验证集准确率accuracy达到`86%`
-+ **运行**：`github`的`action`中，完成全程训练、批测，结果报告通过`cml工具`发送至commit评论
+* [解读](#解读)
+  + torchtext库，做多标签任务
+* [实践](#实践)
+  + textcnn模型，跑[百度事件多标签比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)，验证集准确率accuracy达到`86%`
+* [运行](#运行)
+  + `github`的`action`中，完成全程训练、批测，结果报告通过`cml工具`发送至commit评论
 
 ## 解读
 

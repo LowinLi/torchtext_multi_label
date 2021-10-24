@@ -86,11 +86,7 @@ class ModelLabel:
             acc, loss = self.validate_multi_label(val_iter)
             print(f"验证集准确率:\t{acc}\t\tloss:\t{loss}")
             val_accs.append(round(acc, 3))
-            # 验证集测试
-            val_epoch_loss = 0
-            self.model.eval()
 
-            val_epoch_loss_list.append(round(val_epoch_loss / batch + 1, 3))
         with open("metric.md", "w") as f:
             f.write("## 这是一个CML报告，在ACTIONS中跑的textcnn模型训练和评测结果\n\n")
             f.write("---\n")
