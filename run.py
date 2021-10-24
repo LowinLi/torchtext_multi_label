@@ -90,12 +90,12 @@ class ModelLabel:
         with open("metric.md", "w") as f:
             f.write("## 这是一个CML报告，在ACTIONS中跑的textcnn模型训练和评测结果\n\n")
             f.write("---\n")
-            f.write("|epoch|训练集loss|验证集loss|训练集acc|验证集acc|\n")
-            f.write("|-|-|-|-|-|\n")
-            for epoch, train_loss, val_loss, train_acc, val_acc in zip(
-                epochs, train_epoch_loss_list, val_epoch_loss_list, train_accs, val_accs
+            f.write("|epoch|训练集acc|验证集acc|\n")
+            f.write("|-|-|-|\n")
+            for epoch, train_acc, val_acc in zip(
+                epochs, train_accs, val_accs
             ):
-                f.write(f"|{epoch}|{train_loss}|{val_loss}|{train_acc}|{val_acc}|\n")
+                f.write(f"|{epoch}|{train_acc}|{val_acc}|\n")
 
         # 存onnx格式
         dummy = torch.zeros(self.max_length, 1).long()
