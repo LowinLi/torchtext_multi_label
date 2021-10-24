@@ -245,5 +245,5 @@ class ModelLabel:
 
 if __name__ == "__main__":
     m = ModelLabel(device="cpu", max_length=100, epochs=7)
-    # m.train("sgns_百度")
+    m.train("sgns_百度")
     print(m.evaluate())
