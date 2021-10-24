@@ -1,7 +1,7 @@
 
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FLowinLi%2Ftorchtext_multi_label%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/LowinLi/torchtext_multi_label/goto?ref=main)
-[![License](https://img.shields.io/github/license/LowinLi/cml4textcnn)](https://github.com/LowinLi/torchtext_multi_label/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/LowinLi/torchtext_multi_label)](https://github.com/LowinLi/torchtext_multi_label/blob/main/LICENSE)
 
 ## 标签
 **torchtext**,**multilabel**,**MLOPS**,**CML**,**ONNX**,**textcnn**,**Continuous**
@@ -173,8 +173,11 @@ def multi_label_metrics_transfer(self, y, label_num):
 
 ## 运行
 
-详见本仓库actions
+详见本仓库[actions](https://github.com/LowinLi/torchtext_multi_label/runs/3989234481?check_suite_focus=true)和[cml报告](https://github.com/LowinLi/torchtext_multi_label/commit/fe945cb347a34b0047a26832881cc31bb2866920)
 
+
+
+![](./pic/cml.png)
 ## 参考致谢
 1. [百度事件标签竞赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)
 2. [cml](https://towardsdatascience.com/what-data-scientists-need-to-know-about-devops-2f8bc6660284?gi=d43983ac072b)
