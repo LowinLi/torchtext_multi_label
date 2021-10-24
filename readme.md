@@ -1,6 +1,6 @@
 
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FLowinLi%2Ftorchtext_multi_label%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/LowinLi/torchtext_multi_label/goto?ref=main)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FLowinLi%2Ftorchtext_multi_label%2Fbadge%3Fref%3Dmain&style=?style=flat-square&logo=appveyor)](https://actions-badge.atrox.dev/LowinLi/torchtext_multi_label/goto?ref=main)
 [![License](https://img.shields.io/github/license/LowinLi/torchtext_multi_label)](https://github.com/LowinLi/torchtext_multi_label/blob/main/LICENSE)
 
 ## 标签
