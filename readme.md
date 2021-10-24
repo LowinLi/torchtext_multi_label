@@ -1,3 +1,11 @@
+
+
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FLowinLi%2Ftorchtext_multi_label%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/LowinLi/torchtext_multi_label/goto?ref=main)
+[![License](https://img.shields.io/github/license/LowinLi/cml4textcnn)](https://github.com/LowinLi/torchtext_multi_label/blob/main/LICENSE)
+
+## 标签
+**torchtext**,**multilabel**,**MLOPS**,**CML**,**ONNX**,**textcnn**,**Continuous**
+
 ## 简要
 + **解读**：torchtext库，做多标签任务
 + **实践**：textcnn模型，跑[百度事件多标签比赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)，验证集准确率accuracy达到`86%`
