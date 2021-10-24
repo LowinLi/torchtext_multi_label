@@ -166,12 +166,14 @@ def multi_label_metrics_transfer(self, y, label_num):
 
 因此模型最大长度设置`100`
 
+词向量`sgns_百度.pt`是来自[`sgns.merge.word`](https://github.com/Embedding/Chinese-Word-Vectors)中，训练集出现过的词汇、以及原词向量中词频最高的前`10000`个词
+
 ## 运行
 
 详见本仓库actions
 
 ## 参考致谢
-1. [CLUE](https://github.com/CLUEbenchmark/CLUE)
+1. [百度事件标签竞赛](https://aistudio.baidu.com/aistudio/competition/detail/32/0/introduction)
 2. [cml](https://towardsdatascience.com/what-data-scientists-need-to-know-about-devops-2f8bc6660284?gi=d43983ac072b)
 3. [cml.dev](https://cml.dev/)
 4. [onnx](https://github.com/microsoft/onnxruntime)

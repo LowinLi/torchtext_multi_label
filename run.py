@@ -58,8 +58,6 @@ class ModelLabel:
         epochs = []
         train_accs = []
         val_accs = []
-        train_epoch_loss_list = []
-        val_epoch_loss_list = []
         acc, loss = self.validate_multi_label(val_iter)
         print(f"验证集准确率:\t{acc}\t\tloss:\t{loss}")
         bars = tqdm(range(1, self.epochs + 1))
@@ -68,8 +66,6 @@ class ModelLabel:
             self.model.train()
 
             train_epoch_loss = 0
-            y_p = []
-            y_t = []
             total_batch = len(train_iter)
             for batch, batch_data in enumerate(train_iter):
                 bars.set_description(f"batch{batch}, total{total_batch}")
@@ -87,20 +83,17 @@ class ModelLabel:
             acc, loss = self.validate_multi_label(train_iter)
             print(f"训练集准确率:\t{acc}\t\tloss:\t{loss}")
             train_accs.append(round(acc, 3))
-            train_epoch_loss_list.append(round(loss, 3))
             acc, loss = self.validate_multi_label(val_iter)
             print(f"验证集准确率:\t{acc}\t\tloss:\t{loss}")
             val_accs.append(round(acc, 3))
-            val_epoch_loss_list.append(round(loss, 3))
             # 验证集测试
             val_epoch_loss = 0
             self.model.eval()
 
             val_epoch_loss_list.append(round(val_epoch_loss / batch + 1, 3))
         with open("metric.md", "w") as f:
-            f.write("## 这是一个CML报告，在ACTIONS中跑的textcnn模型训练和评测iflytek公开数据集\n\n")
+            f.write("## 这是一个CML报告，在ACTIONS中跑的textcnn模型训练和评测结果\n\n")
             f.write("---\n")
-            f.write("+ 训练过程，训练集loss和训练集acc是训练一个epoch整个过程中收集的，所以前期比验证集指标低\n\n")
             f.write("|epoch|训练集loss|验证集loss|训练集acc|验证集acc|\n")
             f.write("|-|-|-|-|-|\n")
             for epoch, train_loss, val_loss, train_acc, val_acc in zip(
