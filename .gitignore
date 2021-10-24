@@ -3,3 +3,6 @@ __pycache__
 *.tsv
 *.json
 *.onnx
+*.DS_Store
+metric.md
+evaluate.md

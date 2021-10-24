@@ -241,7 +241,7 @@ class ModelLabel:
         qps = round(len(df) / waste_time, 3)
         accuracy = round(correct / len(df), 3)
         waste_every_record = round(waste_time / len(df) * 1000, 3)
-        with open("evalate.md", "w") as f:
+        with open("evaluate.md", "w") as f:
             f.write("\n---\n")
             f.write("+ 预测\n\n")
             f.write("|指标|值|\n")

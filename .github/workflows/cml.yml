@@ -20,8 +20,7 @@ jobs:
           # Your ML workflow goes here
           pip install --no-cache-dir torch==1.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
           pip install -r requirements.txt
-          cd dataset && sh download.sh
-          cd .. && python run.py
+          python run.py
       - name: Write CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
